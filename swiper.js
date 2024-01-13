@@ -1,12 +1,14 @@
+// Declaration of mySwiper for the scope in the function.
+let mySwiper;
+
 document.addEventListener('DOMContentLoaded', function () {
-  let mySwiper = new Swiper('.mySwiper', {
+  mySwiper = new Swiper('.mySwiper', {
     slidesPerView: 2,
     spaceBetween: 60,
     breakpoints: {
       375: {
         slidesPerView: 3,
       },
-
       640: {
         slidesPerView: 4,
       },
@@ -14,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 5,
       },
     },
-
     effect: 'slide',
     loop: true,
     autoplay: {
@@ -22,13 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
       disableOnInteraction: false,
     },
   });
-});
 
-const swiperContainer = document.querySelector('.mySwiper');
+  const swiperContainer = document.querySelector('.mySwiper');
 
-swiperContainer.addEventListener('mouseenter', function () {
-  mySwiper.autoplay.stop();
-});
-swiperContainer.addEventListener('mouseleave', function () {
-  mySwiper.autoplay.start();
+  // Stop animation
+  swiperContainer.addEventListener('mouseenter', function () {
+    mySwiper.autoplay.stop();
+  });
+
+  // Replay animation
+  swiperContainer.addEventListener('mouseleave', function () {
+    mySwiper.autoplay.start();
+  });
 });
