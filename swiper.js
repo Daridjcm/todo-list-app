@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 4,
+      },
+      640: {
+        slidesPerView: 4,
+      },
+      960: {
+        slidesPerView: 5,
+      }
+    },
     scrollbar: {
       el: '.swiper-scrollbar',
     },
