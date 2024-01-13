@@ -23,3 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
+
+const swiperContainer = document.querySelector('.mySwiper');
+
+swiperContainer.addEventListener('mouseenter', function () {
+  mySwiper.autoplay.stop();
+});
+swiperContainer.addEventListener('mouseleave', function () {
+  mySwiper.autoplay.start();
+});
