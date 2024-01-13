@@ -1,28 +1,20 @@
-// mimport Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.mjs';
-
 document.addEventListener('DOMContentLoaded', function () {
-  var mySwiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  let mySwiper = new Swiper('.mySwiper', {
+    slidesPerView: 2,
+    spaceBetween: 60,
     breakpoints: {
-      0: {
-        slidesPerView: 2,
-        spaceBetween: 4,
+      375: {
+        slidesPerView: 3,
       },
+
       640: {
         slidesPerView: 4,
       },
-      960: {
+      768: {
         slidesPerView: 5,
-      }
+      },
     },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+
     effect: 'slide',
     loop: true,
     autoplay: {
