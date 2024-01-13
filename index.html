@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,39 +6,65 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
-<body class="px-4">
-  <header class="flex justify-between items-end mt-10">
-    <h1 class="text-4xl tracking-tighter">Your Notes</h1>
-    <button class="px-3 py-1 border border-black text-2xl rounded">+</button>
-  </header>
-  
-  <!-- Buttons -->
-  <div class="flex space-x-4 bg-slate-100 p-4 m-3 rounded-lg shadow-2xl">
-    <button class="bg-blue-500 text-white font-bold p-2 m-2 cursor-pointer border border-black hover:bg-blue-600 
-    focus:outline-dashed focus:border-black focus:shadow-outline-blue active:bg-blue-900 transition duration-300 ease-in-out">
-      #Alls
-    </button>
-    <button class="bg-indigo-500 text-white font-bold p-2 m-2 cursor-pointer border border-black hover:bg-indigo-600 
-    focus:outline-dashed focus:border-black focus:shadow-outline-blue active:bg-indigo-900 transition duration-300 ease-in-out">
-      #Work
-    </button>
-    <button class="bg-cyan-500 text-white font-bold p-2 m-2 cursor-pointer border border-black hover:bg-cyan-600 
-    focus:outline-dashed focus:border-black focus:shadow-outline-cyan active:bg-cyan-900 transition duration-300 ease-in-out">
-      #Personal
-    </button>
-    <button class="bg-pink-500 text-white font-bold p-2 m-2 cursor-pointer border border-black hover:bg-pink-600 
-    focus:outline-dashed focus:border-black focus:shadow-outline-pink active:bg-pink-900 transition duration-300 ease-in-out">
-      #Shopping
-    </button>
-    <button class="bg-lime-500 text-white font-bold p-2 m-2 cursor-pointer border border-black hover:bg-lime-600 
-    focus:outline-dashed focus:border-black focus:shadow-outline-lime active:bg-lime-900 transition duration-300 ease-in-out">
-      #Others
-    </button>
-  </div>
+  <body class="px-4">
+    <header class="flex justify-between items-end mt-10">
+      <h1 class="text-4xl tracking-tighter">Your Notes</h1>
+      <button class="px-3 py-1 border border-black text-2xl rounded">+</button>
+    </header>
 
-  <script type="module" src="/main.js"></script>
+  <!-- Slider main container -->
+  <main>
+    <div class="swiper-container w-full h-auto pt-3">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <button class="bg-blue-500 text-white font-bold p-2 px-5 m-2 cursor-pointer border border-black hover:bg-blue-600 
+          focus:outline-dashed focus:border-black focus:shadow-outline-blue active:bg-blue-900 transition duration-300 ease-in-out">
+            #Alls
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <button class="bg-indigo-500 text-white font-bold p-2 px-5 m-2 cursor-pointer border border-black hover:bg-indigo-600 
+          focus:outline-dashed focus:border-black focus:shadow-outline-blue active:bg-indigo-900 transition duration-300 ease-in-out">
+            #Work
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <button class="bg-cyan-500 text-white font-bold p-2 px-5 m-2 cursor-pointer border border-black hover:bg-cyan-600 
+          focus:outline-dashed focus:border-black focus:shadow-outline-cyan active:bg-cyan-900 transition duration-300 ease-in-out">
+            #Personal
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <button class="bg-pink-500 text-white font-bold p-2 px-5 m-2 cursor-pointer border border-black hover:bg-pink-600 
+          focus:outline-dashed focus:border-black focus:shadow-outline-pink active:bg-pink-900 transition duration-300 ease-in-out">
+            #Shopping
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <button class="bg-amber-500 text-white font-bold p-2 px-5 m-2 cursor-pointer border border-black hover:bg-amber-600 
+          focus:outline-dashed focus:border-black focus:shadow-outline-amber active:bg-amber-900 transition duration-300 ease-in-out">
+            #Homework
+          </button>
+        </div>
+        <div class="swiper-slide">
+          <button class="bg-lime-500 text-white font-bold p-2 px-5 m-2 cursor-pointer border border-black hover:bg-lime-600 
+          focus:outline-dashed focus:border-black focus:shadow-outline-lime active:bg-lime-900 transition duration-300 ease-in-out">
+            #Others
+          </button>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>  
+  </main>
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/main.js"></script>
+  <script src="/swiper.js"></script>
 </body>
 
 </html>
