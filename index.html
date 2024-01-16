@@ -12,7 +12,7 @@
   <body class="px-4">
     <header class="flex justify-between items-end mt-10">
       <h1 class="text-4xl tracking-tighter">Your Notes</h1>
-      <button class="px-3 py-1 border border-black text-2xl rounded">+</button>
+      <button id="openDialogButton" class="px-3 py-1 border border-black text-2xl rounded">+</button>
     </header>
 
     <!-- Slider main container -->
@@ -70,7 +70,7 @@
           </div>
         </div>
       </section>
-
+  
       <section id="cards mb-3">
         <div class="container mx-auto m-3">
           <div class="lg:grid grid-cols-3 grid-rows-1 min:grid-cols-1 gap-5 py-3">
@@ -130,6 +130,39 @@
       </section>
     </main>
 
+    <!-- Simple pop-up dialog box, containing a form -->
+    <div class="dialog p-8 w-full md:w-3/4 lg:w-1/2 xl:w-2/3">
+      <dialog id="editDialog" class="bg-white p-10 border border-neutral-800 rounded-2xl shadow-lg">
+        <form method="dialog" onsubmit="editElement(); return false;">
+          <section class="mb-8">
+            <label for="title" class="block text-md font-semibold text-neutral-900 mb-2">Title:</label>
+            <input class="w-full text-white p-2 border border-black rounded" type="text" id="title" required>
+          </section>
+          <section class="mb-8">
+            <label for="dateNow" class="block text-md font-semibold text-neutral-900 mb-2">Current date:</label>
+            <input type="datetime-local" id="dateNow" class="w-full p-4 border border-black rounded">
+          </section>
+          <section class="mb-8">
+            <label for="description" class="block text-md font-semibold text-neutral-900 mb-2">Description:</label>
+            <textarea id="description" class="w-full p-12 border border-black rounded" required></textarea>
+          </section>
+          <menu class="flex justify-evenly">
+            <button id="cancel" type="reset" onclick="closeDialog()" class="mr-4 bg-red-500 text-white py-2 px-6 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5q0-.425.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5q0 .425-.288.713T19 6v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM7 6v13zm5 7.9l1.9 1.9q.275.275.7.275t.7-.275q.275-.275.275-.7t-.275-.7l-1.9-1.9l1.9-1.9q.275-.275.275-.7t-.275-.7q-.275-.275-.7-.275t-.7.275L12 11.1l-1.9-1.9q-.275-.275-.7-.275t-.7.275q-.275.275-.275.7t.275.7l1.9 1.9l-1.9 1.9q-.275.275-.275.7t.275.7q.275.275.7.275t.7-.275z"/>
+              </svg>
+            </button>
+            <button type="submit" class="bg-green-500 text-white py-2 px-6 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M20 19V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1Z"/><path stroke-dasharray="14" stroke-dashoffset="14" d="M8 12L11 15L16 10"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="14;0"/></path></g>
+              </svg>
+            </button>
+          </menu>
+        </form>
+      </dialog>
+    </div>
+
     <footer class="mb-4">
       <div class="bg-slate-200 p-3 shadow-md hover:shadow-xl rounded">
         <p class="text-center">
@@ -149,5 +182,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/main.js"></script>
     <script src="/swiper.js"></script>
+    <script src="/modal.js"></script>
   </body>
 </html>
