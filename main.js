@@ -16,4 +16,15 @@ function createNote(title, description, date) {
   const noteObjectString = JSON.stringify([...lastNotes, note]);
 
   localStorage.setItem('notes', noteObjectString);
+  console.log('main.js');
+}
+
+/**
+ * función para obtener las notas del localstorage
+ * @returns {Array} notas
+ */
+function obtenerNotas() {
+  const notas = JSON.parse(localStorage.getItem('notas') ?? '[]');
+
+  return notas;
 }
