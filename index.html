@@ -12,8 +12,7 @@
   <body class="px-4">
     <header class="flex justify-between items-end mt-10">
       <h1 class="text-4xl tracking-tighter">Your Notes</h1>
-      <button id="openDialogButton" class="px-3 py-1 border border-black text-2xl rounded">+</button>
-    </header>
+      <button id="openDialogButton" class="px-3 py-1 border border-black text-2xlbutton    </header>
 
     <!-- Slider main container -->
     <main class="min-h-svh">
@@ -131,20 +130,16 @@
     </main>
 
     <!-- Simple pop-up dialog box, containing a form -->
-    <div class="dialog p-8 w-full md:w-3/4 lg:w-1/2 xl:w-2/3">
+    <div class="dialog p-8 w-full md:w-2/3 lg:w-1/2 xl:w-2/3">
       <dialog id="editDialog" class="bg-white p-10 border border-neutral-800 rounded-2xl shadow-lg">
         <form method="dialog" onsubmit="editElement(); return false;">
           <section class="mb-8">
             <label for="title" class="block text-md font-semibold text-neutral-900 mb-2">Title:</label>
-            <input class="w-full text-white p-2 border border-black rounded" type="text" id="title" required />
-          </section>
-          <section class="mb-8">
-            <label for="dateNow" class="block text-md font-semibold text-neutral-900 mb-2">Current date:</label>
-            <input type="datetime-local" id="dateNow" class="w-full p-4 border border-black rounded" />
+            <input class="w-full text-black p-2 border border-black rounded" type="text" id="title" required />
           </section>
           <section class="mb-8">
             <label for="description" class="block text-md font-semibold text-neutral-900 mb-2">Description:</label>
-            <textarea id="description" class="w-full p-12 border border-black rounded" required></textarea>
+            <textarea rows="8" id="description" class="w-full border border-black rounded" required></textarea>
           </section>
           <menu class="flex justify-evenly">
             <button id="cancel" type="reset" onclick="closeDialog()" class="mr-4 bg-red-500 text-white py-2 px-6 rounded">
