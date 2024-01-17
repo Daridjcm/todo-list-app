@@ -15,8 +15,7 @@ function editElement() {
   var description = document.getElementById('description').value;
 
   if ((title, description)) {
-    console.log('Title: ' + title);
-    console.log('Description: ' + description);
+    createNote(title, description, new Date());
   } else {
     alert('Please, fill outs all fields.');
   }
