@@ -28,5 +28,3 @@ function obtenerNotas() {
 
   return notas;
 }
-
-createNote();
