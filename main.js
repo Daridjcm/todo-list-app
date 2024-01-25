@@ -8,12 +8,15 @@ function AgregarNotasAlDOM() {
   notes.forEach((note) => {
     const date = new Date(note.date);
     notesContainer.innerHTML += `
-    <div class="card bg-slate-100 border border-black shadow-lg rounded-2xl p-5 m-3 hover:shadow-xl transition-all">
-    <h3 class="font-bold mb-2">${note.title}</h3>
-    <p class="font-light mb-4">${date.toLocaleString('en-US', { day: '2-digit', month: 'numeric', year: '2-digit' })}</p>
-    <p class="font-light">
+  <div class="card bg-slate-100 border border-black shadow-lg rounded-2xl m-3 hover:shadow-xl transition-all">
+    <h3 class="font-bold mb-1 p-2">${note.title}</h3>
+    <p class="font-light mb-1 p-2">${date.toLocaleString('en-US', { day: '2-digit', month: 'numeric', year: '2-digit' })}</p>
+    <div class="font-light p-2">
       ${note.description}
-    </p>
+    </div>
+    <div class="p-2 cursor-pointer" id="btnDeleteNotes">
+      <i class="fas fa-trash-can" style="color: red;"></i>
+    </div>
   </div>
     `;
   });
@@ -40,12 +43,15 @@ function createNote(title, description, date) {
 
   notesContainer.innerHTML =
     `
-    <div class="card bg-slate-100 border border-black shadow-lg rounded-2xl p-5 m-3 hover:shadow-xl transition-all">
-    <h3 class="font-bold mb-2">${note.title}</h3>
-    <p class="font-light mb-4">${date.toLocaleString('en-US', { day: '2-digit', month: 'numeric', year: '2-digit' })}</p>
-    <p class="font-light">
+  <div class="card bg-slate-100 border border-black shadow-lg rounded-2xl m-3 hover:shadow-xl transition-all">
+    <h3 class="font-bold mb-1 p-2">${note.title}</h3>
+    <p class="font-light mb-1 p-2">${date.toLocaleString('en-US', { day: '2-digit', month: 'numeric', year: '2-digit' })}</p>
+    <div class="font-light p-2">
       ${note.description}
-    </p>
+    </div>
+    <div class="p-2 cursor-pointer" id="btnDeleteNote">
+      <i class="fas fa-trash-can" style="color: red;"></i>
+    </div>
   </div>
     ` + notesContainer.innerHTML;
 }
