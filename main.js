@@ -8,7 +8,17 @@ function AgregarNotasAlDOM() {
   notes.forEach((note, index) => {
     const date = new Date(note.date);
     const noteElement = document.createElement('div');
-    noteElement.classList.add('card', 'bg-slate-100', 'border', 'border-black', 'shadow-lg', 'rounded-2xl', 'm-3', 'hover:shadow-xl', 'transition-all');
+    noteElement.classList.add(
+      'card',
+      'bg-slate-100',
+      'border',
+      'border-black',
+      'shadow-lg',
+      'rounded-2xl',
+      'm-3',
+      'hover:shadow-xl',
+      'transition-all',
+    );
     noteElement.innerHTML = `
       <h3 class="font-bold mb-1 p-2">${note.title}</h3>
       <p class="font-light mb-1 p-2">${date.toLocaleString('en-US', { day: '2-digit', month: 'numeric', year: '2-digit' })}</p>
@@ -43,7 +53,17 @@ function createNote(title, description, date) {
 
   // Render the new note
   const noteElement = document.createElement('div');
-  noteElement.classList.add('card', 'bg-slate-100', 'border', 'border-black', 'shadow-lg', 'rounded-2xl', 'm-3', 'hover:shadow-xl', 'transition-all');
+  noteElement.classList.add(
+    'card',
+    'bg-slate-100',
+    'border',
+    'border-black',
+    'shadow-lg',
+    'rounded-2xl',
+    'm-3',
+    'hover:shadow-xl',
+    'transition-all',
+  );
   noteElement.innerHTML = `
     <h3 class="font-bold mb-1 p-2">${note.title}</h3>
     <p class="font-light mb-1 p-2">${date.toLocaleString('en-US', { day: '2-digit', month: 'numeric', year: '2-digit' })}</p>
