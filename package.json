@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "prettier --check --ignore-path .gitignore .",
-    "format": "prettier --write --ignore-path .gitignore . "
+    "format": "prettier --write --ignore-path .gitignore . ",
+    "vercel": "vercel --prod"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
