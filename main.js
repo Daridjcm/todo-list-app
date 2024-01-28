@@ -97,10 +97,6 @@ function obtenerNotas() {
   return notas;
 }
 
-document.getElementById('btnDeleteNotes').addEventListener('click', function () {
-  deleteNotes();
-});
-
 function deleteNotes() {
   localStorage.removeItem('notes');
   notesContainer.innerHTML = '';
