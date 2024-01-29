@@ -2,26 +2,45 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Task 1",
+      "label": "Start Development Server",
       "type": "npm",
       "script": "dev",
-      "runOptions": { "runOn": "folderOpen" }
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     },
     {
-      "label": "Task 3",
+      "label": "Check out to main branch",
       "type": "shell",
       "command": "git",
-      "args": ["checkout", "main"],
-      "group": { "kind": "build", "isDefault": true },
-      "runOptions": { "runOn": "folderOpen" }
+      "args": [
+        "checkout",
+        "main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     },
     {
-      "label": "Task 2",
+      "label": "Pull the changes",
       "type": "shell",
       "command": "git",
-      "args": ["pull", "origin", "main"],
-      "group": { "kind": "build", "isDefault": true },
-      "runOptions": { "runOn": "folderOpen" }
+      "args": [
+        "pull",
+        "origin",
+        "main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }
