@@ -13,10 +13,7 @@
       "label": "Check out to main branch",
       "type": "shell",
       "command": "git",
-      "args": [
-        "checkout",
-        "main"
-      ],
+      "args": ["checkout", "main"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -29,11 +26,7 @@
       "label": "Pull the changes",
       "type": "shell",
       "command": "git",
-      "args": [
-        "pull",
-        "origin",
-        "main"
-      ],
+      "args": ["pull", "origin", "main"],
       "group": {
         "kind": "build",
         "isDefault": true
