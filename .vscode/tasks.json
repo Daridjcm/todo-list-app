@@ -1,27 +1,27 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Task 1",
-            "type": "npm",
-            "script": "dev",
-            "runOptions": { "runOn": "folderOpen" }
-        },
-        {
-            "label": "Task 3",
-            "type": "shell",
-            "command": "git",
-            "args": ["checkout", "main"],
-            "group": { "kind": "build", "isDefault": true },
-            "runOptions": { "runOn": "folderOpen" }
-        },
-        {
-            "label": "Task 2",
-            "type": "shell",
-            "command": "git",
-            "args": ["pull","origin", "main"],
-            "group": { "kind": "build", "isDefault": true },
-            "runOptions": { "runOn": "folderOpen" }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Task 1",
+      "type": "npm",
+      "script": "dev",
+      "runOptions": { "runOn": "folderOpen" }
+    },
+    {
+      "label": "Task 3",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "main"],
+      "group": { "kind": "build", "isDefault": true },
+      "runOptions": { "runOn": "folderOpen" }
+    },
+    {
+      "label": "Task 2",
+      "type": "shell",
+      "command": "git",
+      "args": ["pull", "origin", "main"],
+      "group": { "kind": "build", "isDefault": true },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
 }
