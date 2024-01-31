@@ -1,6 +1,6 @@
 # todo-list-app
 
-Collaborative project by @Michael-Liendo and @Daridjcm.Our project is based so that users can enter this website and use it as long as they can.
+Collaborative project by @Michael-Liendo and @Daridjcm. Our project is based so that users can enter this website and use it as long as they can.
 
 > [!NOTE]
 > If you clone this repository, including the `.vscode` folder, you must keep in mind that you have to have Git Bash enabled in the environment variables, that is, running on all terminals.
