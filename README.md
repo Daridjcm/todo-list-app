@@ -1,9 +1,9 @@
 # todo-list-app
 
-Collaborative project by @Michael-Liendo and @Daridjcm.Our project is based so that users can enter this website and use it as long as they can.
+Collaborative project by @Michael-Liendo and @Daridjcm. Our project is based so that users can enter this website and use it as long as they can.
 
 > [!NOTE]
-> If you clone this repository, including the .vscode folder, you must keep in mind that you have to have Git Bash enabled in the environment variables, that is, running on all terminals.
+> If you clone this repository, including the `.vscode` folder, you must keep in mind that you have to have Git Bash enabled in the environment variables, that is, running on all terminals.
 
 ## Features
 
@@ -14,7 +14,7 @@ Collaborative project by @Michael-Liendo and @Daridjcm.Our project is based so t
 
 ## Future features
 
-- You could delete all the notes that I create on a daily basis with a single click.
+- ~~You could delete all the notes that I create on a daily basis with a single click.~~
 - When playing a note, above. It will redirect you to another page or modal to add more details such as (tags, photos and links).
 - Depending on a predefined label (they come with a default color), an attempt will be made to match the note.
 - Organize notes by tags and filter them.
