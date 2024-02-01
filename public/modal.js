@@ -21,6 +21,4 @@ function editElement() {
   }
   // Cerrar el diálogo después de la edición
   closeDialog();
-  title.value = '';
-  description.value = '';
 }
