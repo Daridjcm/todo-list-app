@@ -75,6 +75,10 @@ function createNote(title, description, date) {
 
   notesContainer.appendChild(noteElement);
 
+  // Clear input fields
+  document.getElementById('title').value = '';
+  document.getElementById('description').value = '';
+
   // Add click event listener to the delete button of the new note
   const deleteButton = noteElement.querySelector('.btnDeleteNote');
   deleteButton.addEventListener('click', function () {
