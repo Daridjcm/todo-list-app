@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="./style.css" />
-
     <script src="https://kit.fontawesome.com/2e825056d4.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
@@ -32,58 +30,77 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper mx-5">
             <div class="swiper-slide">
-              <button
+              <button id="tags-buttons"
                 class="bg-blue-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-blue-600 focus:outline-dashed focus:border-black focus:shadow-outline-blue active:bg-blue-900 transition duration-300 ease-in-out"
               >
-                #Alls
+                <span id="tag-1">
+                    #Alls
+                </span>
               </button>
             </div>
 
             <div class="swiper-slide">
-              <button
+              <button id="tags-buttons"
                 class="bg-indigo-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-indigo-600 focus:outline-dashed focus:border-black focus:shadow-outline-blue active:bg-indigo-900 transition duration-300 ease-in-out"
               >
-                #Work
+                <span id="tag-2">
+                    #Work
+                </span>
               </button>
             </div>
 
             <div class="swiper-slide">
-              <button
+              <button id="tags-buttons"
                 class="bg-cyan-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-cyan-600 focus:outline-dashed focus:border-black focus:shadow-outline-cyan active:bg-cyan-900 transition duration-300 ease-in-out"
               >
-                #Personal
+                <span id="tag-3">
+                    #Personal
+                </span>
               </button>
             </div>
 
             <div class="swiper-slide">
-              <button
+              <button id="tags-buttons"
                 class="bg-pink-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-pink-600 focus:outline-dashed focus:border-black focus:shadow-outline-pink active:bg-pink-900 transition duration-300 ease-in-out"
               >
-                #Shopping
+                <span id="tag-4">
+                    #Shopping
+                </span>
               </button>
             </div>
 
             <div class="swiper-slide">
-              <button
+              <button id="tags-buttons"
                 class="bg-amber-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-amber-600 focus:outline-dashed focus:border-black focus:shadow-outline-amber active:bg-amber-900 transition duration-300 ease-in-out"
               >
-                #Homework
+                <span id="tag-5">
+                    #Homework
+                </span>
               </button>
             </div>
 
             <div class="swiper-slide">
-              <button
+              <button id="tags-buttons"
                 class="bg-lime-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-lime-600 focus:outline-dashed focus:border-black focus:shadow-outline-lime active:bg-lime-900 transition duration-300 ease-in-out"
               >
-                #Others
+                <span id="tag-6">
+                    #Others
+                </span>
               </button>
             </div>
+              <button id="tags-buttons"
+                class="hidden bg-lime-500 px-3 py-2 text-white font-bold cursor-pointer border border-black hover:bg-lime-600 focus:outline-dashed focus:border-black focus:shadow-outline-lime active:bg-lime-900 transition duration-300 ease-in-out"
+              >
+                <span id="tag-7">
+                    #
+                </span>
+              </button>
           </div>
         </div>
       </section>
 
       <section id="cards mb-3">
-        <div class="container mx-auto m-3">
+        <div class="container mx-auto">
           <div id="notesContainer" class="lg:grid grid-cols-3 grid-rows-1 min:grid-cols-1 gap-5 py-3"></div>
         </div>
       </section>
@@ -96,6 +113,11 @@
           <section class="mb-8">
             <label for="title" class="block text-md font-semibold text-neutral-900 mb-2">Title:</label>
             <input class="w-full text-black p-2 border border-black rounded" type="text" id="title" required />
+          </section>
+          <section>
+            <input type="text" id="tagInput" class="p-2 border border-black rounded w-full" placeholder="Type #tag to filter" />
+            <div id="dynamicTagsContainer" class="mt-4 flex gap-2 flex-wrap"></div>
+
           </section>
           <section class="mb-8">
             <label for="description" class="block text-md font-semibold text-neutral-900 mb-2">Description:</label>
